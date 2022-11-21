@@ -10,11 +10,14 @@ def get_job_details():
     # Refer Example #1 for definition of function 'get_server_instance'
     print('Connecting to the Jenkins Server...')
     server = get_server_instance()
+    print('|\tJob Name\t|\trunning\t|\tenabled\t|')
+    print('_'*56)
     for job_name, job_instance in server.get_jobs():
-        print ('Job Name: ', job_instance.name)
-        print ('Job Description: ' ,job_instance.get_description())
-        print ('Is Job running: ' ,job_instance.is_running())
-        print ('Is Job enabled: ' ,job_instance.is_enabled())
+        print ('|', job_instance.name,' | ', job_instance.is_running() , ' | ', job_instance.is_enabled(), ' |')
+        print('_'*56)
+        # print ('Job Description: ' ,job_instance.get_description())
+        # print ('Is Job running: ' ,job_instance.is_running())
+        # print ('Is Job enabled: ' ,job_instance.is_enabled())
 
 
 def main():
