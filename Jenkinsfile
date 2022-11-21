@@ -9,8 +9,6 @@ pipeline {
         }
         stage('Install pre-requirements') {
             steps {
-                sh 'virtualenv venv'
-                sh 'source venv/bin/activate'
                 sh 'pip install -r requirements.txt'
             }
         }
