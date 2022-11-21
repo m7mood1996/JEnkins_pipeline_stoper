@@ -9,7 +9,9 @@ pipeline {
         }
         stage('Install pre-requirements') {
             steps {
-                sh 'pip install --user runloop requirements.txt'
+                sh 'virtualenv .venv'
+                sh 'source .venv/bin/activate'
+                sh 'pip install -r requirements.txt'
             }
         }
         stage('Python Script') {
