@@ -7,5 +7,10 @@ pipeline {
                 sh 'python --version'
             }
         }
+        stage('Python Script') {
+            steps {
+                sh 'python -mainn.py'
+            }
+        }
     }
 }
