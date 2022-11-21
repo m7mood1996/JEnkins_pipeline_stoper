@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Python Script') {
             steps {
-                sh 'python -mainn.py'
+                sh 'python main.py'
             }
         }
     }
