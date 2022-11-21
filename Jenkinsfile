@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Install pre-requirements') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt --user'
             }
         }
         stage('Python Script') {
