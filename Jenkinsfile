@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Python Script') {
             steps {
-                sh 'python3 main.py ${env.JOB_NAME}'
+                sh 'python3 main.py $JOB_NAME'
             }
         }
     }
