@@ -1,0 +1,1 @@
+# JEnkins_pipeline_stoper
